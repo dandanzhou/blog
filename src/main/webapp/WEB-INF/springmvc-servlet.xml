@@ -15,7 +15,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <context:component-scan base-package="me.veryyoung.skeleton.controller"/>
+    <context:component-scan base-package="com.daisydan.blog.controller"/>
 
     <bean id="mappingJackson2HttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -46,7 +46,7 @@
     <context:annotation-config/>
 
     <mvc:interceptors>
-        <bean class="me.veryyoung.skeleton.web.AuthenticationFilter"></bean>
+        <bean class="com.daisydan.blog.web.AuthenticationFilter"></bean>
     </mvc:interceptors>
 
 

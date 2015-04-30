@@ -7,13 +7,13 @@
        http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
        default-lazy-init="true">
 
-    <context:component-scan base-package="me.veryyoung.skeleton"/>
+    <context:component-scan base-package="com.daisydan.blog"/>
 
     <!-- 引入配置文件 -->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:skeleton.properties</value>
+                <value>classpath:blog.properties</value>
             </list>
         </property>
     </bean>
@@ -56,7 +56,7 @@
 
         <property name="packagesToScan">
             <list>
-                <value>me.veryyoung.skeleton.entity</value>
+                <value>com.daisydan.blog.entity</value>
             </list>
         </property>
     </bean>
@@ -75,12 +75,12 @@
     </tx:advice>
 
     <aop:config>
-        <aop:pointcut expression="execution(* me.veryyoung.skeleton.service.*.*(..))" id="txPointcutService"/>
+        <aop:pointcut expression="execution(* com.daisydan.blog.service.*.*(..))" id="txPointcutService"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcutService" />
     </aop:config>
 
     <aop:config>
-        <aop:pointcut expression="execution(* me.veryyoung.skeleton.dao.*.*(..))" id="txPointcutDao"/>
+        <aop:pointcut expression="execution(* com.daisydan.blog.dao.*.*(..))" id="txPointcutDao"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcutDao" />
     </aop:config>
 

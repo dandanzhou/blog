@@ -22,7 +22,7 @@
     <c:forEach items="${users}" var="user">
         <tr>
             <td>${user.userName}</td>
-            <td><sk:stringMask beforeMask="${user.password}"/></td>
+            <td><blog:stringMask beforeMask="${user.password}"/></td>
             <td><fmt:formatDate value="${user.createTime}" pattern="yyyy年MM月dd日"/></td>
             <td><c:choose>
                 <c:when test="${user.admin}">
