@@ -1,7 +1,6 @@
 package com.daisydan.blog.entity;
 
 import lombok.Data;
-import com.daisydan.blog.validator.constraints.UserName;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -9,8 +8,8 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "article")
+public class Article {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -18,18 +17,17 @@ public class User {
     @Column(length = 32)
     private String id;
 
-    @Column(length = 20)
-    @UserName
-    private String userName;
+    @Column(length = 50)
+    private String title;
 
-    @Column(length = 32)
-    private String password;
+    @Column(length = 1000)
+    private String content;
 
-    private Date createTime;
+    private Date phTime;
 
-    //是否为管理员
     @Column(columnDefinition = "boolean default false", nullable = false)
-    private boolean admin;
+    private boolean enable;
 
-
+    @Column(columnDefinition = "boolean default false", nullable = false)
+    private boolean top;
 }
