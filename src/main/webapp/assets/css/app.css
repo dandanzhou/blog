@@ -393,24 +393,12 @@ a, a:hover {
     padding: 0px 24px;
 }
 
-.tb-login a.link-index {
-    background: #b89590;
+.tb-login a.link-index,a.link-signin,a.link-signup{
+    background: rgb(66, 65, 63);
 }
 
-.tb-login a.link-signin {
-    background: #1c76b8;
-}
-
-.tb-login a.link-signin:hover {
-    background: #2A96EE;
-}
-
-.tb-login a.link-signup {
-    border-right: 1px solid #666;
-}
-
-.tb-login a.link-signup:hover {
-    background: #2D3139;
+.tb-login a.link-index:hover,a.link-signin:hover,a.link-signup:hover{
+    background: rgb(103, 103, 102);
 }
 
 .loan-title-group {

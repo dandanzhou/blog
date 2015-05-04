@@ -7,17 +7,8 @@
             <!-- Foot Item -->
             <div class="foot-item">
                 <!-- Heading -->
-                <div>
-                    <ul class="list-inline">
-                        <!-- Link -->
-                        <li><span>友情链接：</span></li>
-                        <li><a href="http://veryyoung.me/" target="_blank">VERYYOUNG</a></li>
-                        <li><a href="http://www.minishine.com/" target="_blank">路人-戊</a></li>
-                        <li><a href="http://www.zhenghang.info/" target="_blank">COCO</a></li>
-                    </ul>
-                </div>
                 <div class="container">
-                    <div class="pull-right text-version">© 2015 ${appName}&nbsp;版权所有</div>
+                    <div class="pull-right text-version">© 2015 果丹皮&nbsp;版权所有</div>
                 </div>
             </div>
         </div>
