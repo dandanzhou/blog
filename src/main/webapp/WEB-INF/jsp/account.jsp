@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>个人中心-${appName}</title>
+    <title>果丹皮</title>
     <%@include file="common/head.jspf" %>
 </head>
 <body>

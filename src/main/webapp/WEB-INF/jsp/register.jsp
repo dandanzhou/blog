@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>注册-${appName}</title>
+    <title>果丹皮</title>
     <link href="${pageContext.request.contextPath}/assets/css/pages/register.css" rel="stylesheet"/>
     <%@include file="common/head.jspf" %>
 </head>

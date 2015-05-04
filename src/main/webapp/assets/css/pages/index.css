@@ -1,0 +1,40 @@
+.main-part{
+    background-color: #E7E7E7;
+    width: 100%;
+    height: auto;
+}
+.title{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.link{
+    font-size: larger;
+    font-style: italic;
+}
+.serach,.tag,.discuss,.fr-link,.count{
+    border: solid 1px #B9BDBD;
+    border-radius: 4px;
+    margin: 20px;
+}
+.serach{
+    height: 50px;
+}
+.tag{
+    height: 100px;
+}
+.discuss{
+    height: 200px;
+}
+.fr-link{
+    height: 200px;
+}
+.count{
+    height: 250px;
+}
+.green1{
+    background-color: #dee9ff;
+    height: 32px;
+    color: black;
+    font-weight: 700;
+    padding: 6px;
+}
