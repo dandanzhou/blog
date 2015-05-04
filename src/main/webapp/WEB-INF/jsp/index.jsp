@@ -35,7 +35,15 @@
             <div class="margin-top-20"></div>
             <div class="col-md-8"></div>
             <div class="col-md-4">
-                <div class="serach">
+                <div class="serach" id="search-box">
+                    <div class="widget-content">
+                        <form id="search" method="post" action="/">
+                        <fieldset>
+                            <input type="text" name="s" class="text" placeholder="搜索 Search" autocomplete="off">
+                            <button type="submit"><img src="../assets/images/search.png"></button>
+                        </fieldset>
+                        </form>
+                    </div>
                 </div>
                 <div class="tag">
                     <div class="green1">标签云</div>
