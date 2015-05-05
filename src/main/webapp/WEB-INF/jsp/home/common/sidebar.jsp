@@ -20,28 +20,17 @@
     </div>
   </div>
   <div class="tag">
-    <div class="green1">标签云</div>
+    <div class="green1">文章分类</div>
     <div class="some">
-      <div id="div1">
-        <a href="http://www.51xuediannao.com">jquery特效</a>
-        <a href="http://www.51xuediannao.com" class="red">网页特效</a>
-        <a href="http://www.51xuediannao.com">网页欣赏</a>
-        <a href="http://www.51xuediannao.com" class="red">导航菜单</a>
-        <a href="http://www.51xuediannao.com" class="blue">懒人建站</a>
-        <a href="http://www.51xuediannao.com" class="red">网页特效</a>
-        <a href="http://www.51xuediannao.com" class="yellow">JavaScript</a>
-        <a href="http://www.51xuediannao.com">jquery</a>
-        <a href="http://www.51xuediannao.com" class="red">CSS</a>
-        <a href="http://www.51xuediannao.com">jquery特效</a>
-        <a href="http://www.51xuediannao.com">jquery特效</a>
-        <a href="http://www.51xuediannao.com" class="blue">CSS技巧</a>
-        <a href="http://www.51xuediannao.com">焦点幻灯片</a>
-        <a href="http://www.51xuediannao.com" class="blue">导航菜单</a>
-        <a href="http://www.51xuediannao.com">jquery</a>
-        <a href="http://www.51xuediannao.com" class="blue">懒人建站</a>
-        <a href="http://www.51xuediannao.com" class="yellow">网页特效</a>
-        <a href="http://www.51xuediannao.com" class="blue">懒人建站</a>
-      </div>
+      <ul>
+        <li>● HTML （）</li>
+        <li>● CSS （）</li>
+        <li>● JQuery （）</li>
+        <li>● JavaScript （）</li>
+        <li>● Node.js （）</li>
+        <li>● Java （）</li>
+        <li>● 其他 （）</li>
+      </ul>
     </div>
   </div>
   <div class="discuss">
