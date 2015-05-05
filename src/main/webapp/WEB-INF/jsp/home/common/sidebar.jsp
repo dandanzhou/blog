@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="discuss">
-    <div class="green1">公告信息</div>
+    <div class="green1">热门文章</div>
     <div class="some"></div>
   </div>
   <div class="fr-link">
@@ -51,8 +51,6 @@
     <div class="green1">网站统计</div>
     <div class="some">
       <ul>
-        <li>● 建站日期 ： </li>
-        <li>● 运行天数 ： </li>
         <li>● 文章统计 ： </li>
         <li>● 最后发表 ： </li>
         <li>● 评论统计 ： </li>
@@ -60,7 +58,5 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  seajs.use("pages/tags");
-</script>
+
 

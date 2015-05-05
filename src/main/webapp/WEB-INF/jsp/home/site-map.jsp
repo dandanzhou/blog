@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-  <title>About-果丹皮的博客</title>
+  <title>网站地图-果丹皮的博客</title>
   <%@include file="../common/head.jspf" %>
 </head>
 <body>
