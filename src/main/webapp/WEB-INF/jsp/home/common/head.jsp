@@ -17,9 +17,9 @@
       <div class="col-md-8">
         <div class="margin-top-20"></div>
         <div class="link">
-          <div class="col-sm-2"><a href="../home/about.jsp">About</a></div>
-          <div class="col-sm-2"><a href="../home/site-map.jsp">网站地图</a></div>
-          <div class="col-sm-8"><a href="../home/messages.jsp">留言板</a></div>
+          <div class="col-sm-2"><a href="/about">About</a></div>
+          <div class="col-sm-2"><a href="/site-map">网站地图</a></div>
+          <div class="col-sm-8"><a href="/messages">留言板</a></div>
           <div class="clearfix"></div>
         </div>
       </div>

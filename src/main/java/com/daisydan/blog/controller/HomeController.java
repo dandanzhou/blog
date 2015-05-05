@@ -118,4 +118,21 @@ public class HomeController extends BaseController {
     }
 
 
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String getAbout() {
+        return "/home/about";
+    }
+
+
+    @RequestMapping(value = "/site-map", method = RequestMethod.GET)
+    public String getSiteMap() {
+        return "/home/site-map";
+    }
+
+
+    @RequestMapping(value = "/messages", method = RequestMethod.GET)
+    public String getMessages() {
+        return "/home/messages";
+    }
+
 }
