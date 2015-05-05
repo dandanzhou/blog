@@ -80,3 +80,22 @@
     border-radius: 0 2px 2px 0;
     cursor: pointer;
 }
+/*.fr-link1,.fr-link2,.fr-link3{*/
+    /*font-size: 10px;*/
+    /*line-height: 1.2em;*/
+    /*color: black;*/
+/*}*/
+.some{
+    margin: 9px;
+    overflow: hidden;
+}
+.some ul{
+    padding-left: 10px;
+    list-style-type: disc;
+    margin: 0;
+}
+.some li{
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+}

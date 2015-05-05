@@ -3,9 +3,26 @@
 <html>
 <head>
     <title>首页-果丹皮的博客</title>
-    <%@include file="home/background.jsp" %>
+    <%@include file="common/head.jspf" %>
 </head>
 <body>
 </body>
+<%@include file="common/topNav.jspf" %>
+<div class="main-part">
+    <div class="container">
+        <%@include file="home/common/head.jsp" %>
+        <div class="part2">
+            <div class="margin-top-20"></div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <%@include file="home/common/sidebar.jsp" %>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="margin-top-30"></div>
+    </div>
+</div>
+
+<%@include file="common/footer.jspf" %>
 
 </html>

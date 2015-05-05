@@ -40,10 +40,6 @@ public class HomeController extends BaseController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/home/about", method = RequestMethod.GET)
-    public String getAbout() {
-        return "/home/about";
-    }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String getRegister() {
