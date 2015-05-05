@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>果丹皮</title>
+    <title>登陆-果丹皮的博客</title>
     <%@include file="common/head.jspf" %>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>果丹皮</title>
+    <title>注册-果丹皮的博客</title>
     <link href="${pageContext.request.contextPath}/assets/css/pages/register.css" rel="stylesheet"/>
     <%@include file="common/head.jspf" %>
 </head>
