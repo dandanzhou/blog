@@ -118,6 +118,7 @@
               <ul class="children"></ul>
             </li>
             </ol>
+            <div class="margin-top-30"></div>
             <div id="comment-form">
               <h3 class="response">发表评论 <small><a id="cancel-comment-reply-link" href="https://blog.alphatr.com/my-web-dev-environment-1.html" rel="nofollow" style="display:none">取消回复</a></small></h3>
               <form method="post" action="https://blog.alphatr.com/my-web-dev-environment-1.html/comment" novalidate="">
