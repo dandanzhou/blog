@@ -135,4 +135,9 @@ public class HomeController extends BaseController {
         return "/home/messages";
     }
 
+    @RequestMapping(value = "/details", method = RequestMethod.GET)
+    public String getDetails() {
+        return "/home/details";
+    }
+
 }

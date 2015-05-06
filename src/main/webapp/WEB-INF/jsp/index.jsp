@@ -7,9 +7,11 @@
     <c:choose>
         <c:when test="${dev_mode}">
             <link href="${pageContext.request.contextPath}/assets/css/pages/index.css" rel="stylesheet"/>
+            <link href="${pageContext.request.contextPath}/assets/css/pages/date.css" rel="stylesheet"/>
         </c:when>
         <c:otherwise>
             <link href="${pageContext.request.contextPath}/assets/css/pages/index.min.css" rel="stylesheet"/>
+            <link href="${pageContext.request.contextPath}/assets/css/pages/date.min.css" rel="stylesheet"/>
         </c:otherwise>
     </c:choose>
 </head>
@@ -22,6 +24,7 @@
         <div class="part2">
             <div class="margin-top-20"></div>
             <div class="pull-left">
+                <div class="margin-top-20"></div>
                 <div id="main">
                     <section class="post">
                         <h1 class="title"><a href="https://blog.alphatr.com/nginx-ssl-config.html" title="SSL 配置研究">SSL 配置研究</a></h1>
@@ -101,7 +104,8 @@
                             </span>
                         </p>
                     </section>
-                <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
             <div class="pull-left">
                 <%@include file="home/common/sidebar.jsp" %>
