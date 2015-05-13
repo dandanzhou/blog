@@ -187,3 +187,41 @@ button, input {
 #comment-form {
     margin-left: 14%;
 }
+#comments .children {
+    margin-left: 5%;
+    padding: 0;
+    list-style-type: none;
+}
+#comments .children .comment-body {
+    background: rgba(100,200,255,.1);
+    border: 1px solid rgba(100,200,255,.3);
+    border-radius: 5px;
+    margin: 10px -2px;
+}
+#comments .comment-body {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+#comments .children .comment-box:after {
+    left: 72px;
+    top: -21px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 8px;
+    border-color: transparent transparent rgba(100,200,255,.3) transparent;
+}
+#comments .comment-box:after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 200;
+    left: 72px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px;
+    border-color: transparent #C4E2F3 #C4E2F3 transparent;
+}

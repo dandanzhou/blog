@@ -99,24 +99,25 @@
           </article>
           <div id="comments">
             <h4>仅 1 条评论</h4>
-            <ol class="comment-list"><li class="comment by-user parent">
-              <div class="comment-body clearfix">
-                <a class="comment-author" title="少壮" href="http://shaozhuang.me" target="_blank" rel="external nofollow">
-                  <img class="avatar" src="//dn-astc.qbox.me/avatar/b0d4c88baf0ebdf9b724fcd6694082de.60" alt="少壮" width="60" height="60">                <span class="author">少壮</span>
-                </a>
-                <div class="comment-main">
-                  <div class="comment-box">
-                    <div class="comment-content">学习一下～</div>
-                    <p class="comment-meta">
-                      <span><a href="#reply-2396">回复</a></span>
-                      <span>2014-10-26 14:09</span>
-                      <span></span>
-                    </p>
+            <ol class="comment-list">
+              <li class="comment by-user parent">
+                <div class="comment-body clearfix">
+                  <a class="comment-author" title="少壮" href="http://shaozhuang.me" target="_blank" rel="external nofollow">
+                    <img class="avatar" src="//dn-astc.qbox.me/avatar/b0d4c88baf0ebdf9b724fcd6694082de.60" alt="少壮" width="60" height="60">                <span class="author">少壮</span>
+                  </a>
+                  <div class="comment-main">
+                    <div class="comment-box">
+                      <div class="comment-content">学习一下～</div>
+                      <p class="comment-meta">
+                        <span><a href="#reply-2396">回复</a></span>
+                        <span>2014-10-26 14:09</span>
+                        <span></span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
               <ul class="children"></ul>
-            </li>
+              </li>
             </ol>
             <div class="margin-top-30"></div>
             <div id="comment-form">
