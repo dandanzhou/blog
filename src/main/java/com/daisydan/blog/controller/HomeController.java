@@ -111,10 +111,10 @@ public class HomeController extends BaseController {
         }
     }
 
-    @RequestMapping(value = "/account", method = RequestMethod.GET)
+    @RequestMapping(value = "/user-index", method = RequestMethod.GET)
     @LoginRequired
     public String getAccount() {
-        return "/account";
+        return "/user-index";
     }
 
 
