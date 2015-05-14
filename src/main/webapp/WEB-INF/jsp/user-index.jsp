@@ -16,9 +16,8 @@
 <body>
 <%@include file="common/topNav.jspf" %>
 <div class="main">
-    <div class="margin-top-10"></div>
     <div class="main-part">
-        <div class="user-title">用户后台管理</div>
+        <%@include file="manager/common/head.jsp" %>
         <div class="manager">
             <div class="col-md-2">
                 <%@include file="manager/common/sidebar.jsp" %>
