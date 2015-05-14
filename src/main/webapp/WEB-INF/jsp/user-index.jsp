@@ -6,8 +6,14 @@
 </head>
 <body>
 <%@include file="common/topNav.jspf" %>
-<div class="container">
-
+<div class="main">
+    <div class="container">
+        <div class="col-md-4">
+            <%@include file="manager/common/sidebar.jsp" %>
+        </div>
+        <div class="col-md-8"></div>
+        <div class="clearfix"></div>
+    </div>
 </div>
 <%@include file="common/footer.jspf" %>
 </body>

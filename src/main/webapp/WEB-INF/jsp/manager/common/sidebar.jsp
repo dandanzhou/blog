@@ -1,26 +1,37 @@
 <%@page pageEncoding="UTF-8"%>
-<div class="account-sidebar">
-    <ul class="list-unstyled left-menu">
-        <li class="item">
-            <a href="/account/index" data-page="index,invest,repayment,funds">账户概况</a>
-        </li>
-        <li class="item">
-            <a href="/account/recharge" data-page="recharge,withdraw,bankcard">充值提现</a>
-        </li>
-        <li class="item">
-            <a href="/account/entrust" data-page="entrust">托管账户</a>
-        </li>
-        <li class="item">
-            <a href="/account/invitegift" data-page="invitegift,giftcard,giftusage,referral">我的红包</a>
-        </li>
-        <li class="item">
-            <a href="/account/loan" data-page="loan">借款管理</a>
-        </li>
-        <li class="item">
-            <a href="/account/settings" data-page="settings,changePassword">个人设置</a>
-        </li>
-        <!--  <li class="item">
-             <a href="/account/loan" data-page="loan">借款管理</a>
-         </li> -->
-    </ul>
-</div>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="cm" uri="/WEB-INF/tld/cm.tld" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<cm:securityTag privilegeString="EMPLOYEE_LIST">
+    <li>
+        <a href="#" class="dropdown-toggle">
+            <i class="icon-group"></i>
+            <span class="menu-text">员工管理</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+        <ul class="submenu">
+            <li><a href="employee/list"><i
+                    class="icon-double-angle-right"></i>员工列表</a></li>
+            <li><a href="employee/roles"><i
+                    class="icon-double-angle-right"></i>角色权限</a></li>
+            <li><a
+                    href="employee/branches"><i class="icon-double-angle-right"></i>组织机构</a></li>
+        </ul>
+    </li>
+</cm:securityTag>
+
+<cm:securityTag privilegeString="USER_LIST">
+    <li>
+        <a href="#" class="dropdown-toggle">
+            <i class="icon-user"></i>
+            <span class="menu-text">用户管理</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+        <ul class="submenu">
+            <li><a href="user/list"><i
+                    class="icon-double-angle-right"></i>个人用户</a></li>
+            <li><a
+                    href="corporation/list"><i class="icon-double-angle-right"></i>企业用户</a></li>
+        </ul>
+    </li>
+</cm:securityTag>
