@@ -74,7 +74,7 @@
 <%@include file="common/footer.jspf" %>
 
 <script type="text/javascript">
-    seajs.use("pages/login");
+    seajs.use("pages-src/login");
 </script>
 
 </body>

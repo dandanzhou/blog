@@ -1,37 +1,58 @@
-<%@page pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="cm" uri="/WEB-INF/tld/cm.tld" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<cm:securityTag privilegeString="EMPLOYEE_LIST">
-    <li>
-        <a href="#" class="dropdown-toggle">
-            <i class="icon-group"></i>
-            <span class="menu-text">员工管理</span>
-            <b class="arrow icon-angle-down"></b>
-        </a>
-        <ul class="submenu">
-            <li><a href="employee/list"><i
-                    class="icon-double-angle-right"></i>员工列表</a></li>
-            <li><a href="employee/roles"><i
-                    class="icon-double-angle-right"></i>角色权限</a></li>
-            <li><a
-                    href="employee/branches"><i class="icon-double-angle-right"></i>组织机构</a></li>
-        </ul>
-    </li>
-</cm:securityTag>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-2.1.1.min.js"></script>
+<script>
+    $(function(){
+        $('#title1').click(function(){
+            $('#content1').toggle();
 
-<cm:securityTag privilegeString="USER_LIST">
-    <li>
-        <a href="#" class="dropdown-toggle">
-            <i class="icon-user"></i>
-            <span class="menu-text">用户管理</span>
-            <b class="arrow icon-angle-down"></b>
-        </a>
-        <ul class="submenu">
-            <li><a href="user/list"><i
-                    class="icon-double-angle-right"></i>个人用户</a></li>
-            <li><a
-                    href="corporation/list"><i class="icon-double-angle-right"></i>企业用户</a></li>
+        })
+        $('#title2').click(function(){
+            $('#content2').toggle();
+
+        })
+        $('#title3').click(function(){
+            $('#content3').toggle();
+
+        })
+        $('#title4').click(function(){
+            $('#content4').toggle();
+
+        })
+    })
+</script>
+<link href="${pageContext.request.contextPath}/assets/css/pages/user-sidebar.min.css" rel="stylesheet"/>
+<div class="user-sidebar">
+    <div id=title1><img src="../assets/images/write.png" style="margin-right: 10px;"> 文章管理</div>
+    <div id=content1 style="display:none">
+        <ul>
+            <li><a href="">所有文章</a></li>
+            <li><a href="">写文章</a></li>
+            <li><a href="">分类目录</a></li>
         </ul>
-    </li>
-</cm:securityTag>
+    </div>
+
+    <div id=title2><img src="../assets/images/media.png" style="margin-right: 16px;">媒体管理</div>
+    <div id=content2 style="display:none">
+        <ul>
+            <li><a href="">媒体库</a></li>
+            <li><a href="">添加</a></li>
+        </ul>
+    </div>
+
+    <div id=title3><img src="../assets/images/link.png" style="margin-right: 16px;">链接管理</div>
+    <div id=content3 style="display:none">
+        <ul>
+            <li><a href="">全部链接</a></li>
+            <li><a href="">添加</a></li>
+            <li><a href="">分类</a></li>
+        </ul>
+    </div>
+
+    <div id=title4><img src="../assets/images/talk.png" style="margin-right: 16px;">评论管理</div>
+    <div id=content4 style="display:none">
+        <ul>
+            <li><a href="">所有评论</a></li>
+            <li><a href="">设置评论</a></li>
+        </ul>
+    </div>
+</div>
