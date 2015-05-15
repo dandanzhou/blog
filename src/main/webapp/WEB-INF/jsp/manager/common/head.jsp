@@ -4,7 +4,7 @@
     font-size: 26px;
     font-weight: bold;
     color: #707070;
-    margin: 6px 0 6px 16px;
+    margin: 6px 0;
     background-color: rgb(242, 250, 250);
 }
 </style>

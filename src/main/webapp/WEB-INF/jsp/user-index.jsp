@@ -19,10 +19,27 @@
     <div class="main-part">
         <%@include file="manager/common/head.jsp" %>
         <div class="manager">
-            <div class="col-md-2">
+            <div class="pull-left">
                 <%@include file="manager/common/sidebar.jsp" %>
             </div>
-            <div class="col-md-10"></div>
+            <div class="pull-left wrap">
+                <h2><img src="../assets/images/write.png" style="margin-right: 10px;">文章<a href="write.jsp" class="add-new-h2">写文章</a> </h2>
+                <ul class="sub">
+                    <li class="all">
+                        <a href="" class="current">全部<span class="count">（）</span>|</a>
+                    </li>
+                    <li class="publish">
+                        <a href="">已发布<span class="count">（）</span></a>
+                    </li>
+                </ul>
+                <form id="post-filter" action method="">
+                    <p class="search-box">
+                        <label class="screen-reader-text" for="post-search-input">搜索文章:</label>
+                        <input type="search" id="post-search-input" name="s" value="">
+                        <input type="submit" name="" id="search-submit" class="button" value="搜索文章"></p>
+                    </p>
+                </form>
+            </div>
             <div class="clearfix"></div>
         </div>
     </div>
