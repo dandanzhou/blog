@@ -4,16 +4,29 @@
 }
 #title1,#title2,#title3,#title4{
     cursor: pointer;
-    font-size: 20px;
-    border: 1px solid lightslategray;
-    background-color: dimgray;
-    color: #bce8f1;
+    font-size: 16px;
+    border: 1px solid #f0f4f7;
+    background-color: #eaeaea;
+    color: #545859;
     padding: 10px;
 }
 #content1,#content2,#content3,#content4{
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 28%;
-    line-height: 1.7em;
-    border: 1px solid lightslategray;
-    background-color: rgb(226, 224, 226);
+    line-height: 2.1em;
+    border: 1px solid rgb(239, 240, 242);
+    background-color: #EAEEF5;
+}
+.arrow {
+    display: inline-block;
+    width: 14px!important;
+    height: 14px;
+    line-height: 14px;
+    text-shadow: none;
+    font-size: 18px;
+    position: absolute;
+    right: 9px;
+    top: 11px;
+    padding: 0;
+    color: #666;
 }
