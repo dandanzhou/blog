@@ -19,7 +19,15 @@
         <div class="link">
           <div class="col-sm-2"><a href="/about">About</a></div>
           <div class="col-sm-2"><a href="/site-map">网站地图</a></div>
-          <div class="col-sm-8"><a href="/messages">留言板</a></div>
+          <c:choose>
+            <c:when test="">
+              <div class="col-sm-2"><a href="/messages">留言板</a></div>
+              <div class="col-sm-6"><a href="/write">文章发布</a></div>
+            </c:when>
+            <c:otherwise>
+              <div class="col-sm-8"><a href="/messages">留言板</a></div>
+            </c:otherwise>
+          </c:choose>
           <div class="clearfix"></div>
         </div>
       </div>

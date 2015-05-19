@@ -45,7 +45,6 @@
 <%@include file="../common/topNav.jspf" %>
 <div class="main">
   <div class="main-part">
-    <%@include file="common/head.jsp" %>
     <div class="manager">
       <div class="pull-left wrap">
         <h2><img src="../assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>

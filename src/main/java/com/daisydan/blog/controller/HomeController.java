@@ -142,7 +142,7 @@ public class HomeController extends BaseController {
 
     @RequestMapping(value = "/write", method = RequestMethod.GET)
     public String getWrite() {
-        return "/manager/write";
+        return "/home/write";
     }
 
 }
