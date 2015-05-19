@@ -21,9 +21,6 @@
     <div class="main-part">
         <%@include file="manager/common/head.jsp" %>
         <div class="manager">
-            <div class="pull-left">
-                <%@include file="manager/common/sidebar.jsp" %>
-            </div>
             <div class="pull-left wrap">
                 <h2><img src="../assets/images/write.png" style="margin-right: 10px;">文章<a href="write.jsp" class="add-new-h2">写文章</a> </h2>
                 <ul class="sub">

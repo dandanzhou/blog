@@ -1,13 +1,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<style type="text/css">
-  .user-title{
-    font-size: 26px;
-    font-weight: bold;
-    color: #707070;
-    margin: 6px 0;
-    background-color: rgb(242, 250, 250);
-}
-</style>
-<div class="wrapper">
-  <div class="user-title">用户后台管理</div>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(".user-sidebar").mouseout(function(){
+      $("#content1").hide();
+    });
+    $(".user-sidebar").mouseover(function(){
+      $("#content1").show();
+    });
+  })
+</script>
+<link href="${pageContext.request.contextPath}/assets/css/pages/user-sidebar.min.css" rel="stylesheet"/>
+<div class="user-sidebar">
+  <div id="title1" class="pull-left"><img src="../assets/images/write.png" style="margin-right: 10px;"> 文章管理<span class="arrow icon-angle-down"></span></div>
+  <div id="content1" class="pull-left" style="display:none">
+    <ul class="list-inline">
+      <li><a href="user-index">所有文章</a></li>
+      <li><a href="write">写文章</a></li>
+      <li><a href="">编辑文章</a></li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
 </div>
