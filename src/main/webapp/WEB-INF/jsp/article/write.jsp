@@ -109,7 +109,7 @@
 
 <%@include file="../common/footer.jspf" %>
 </body>
-<script type="text/javascript" src="assets/js/jquery.qeditor.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.qeditor.js"></script>
 <script type="text/javascript">
     $("#post_body").qeditor({});
 
