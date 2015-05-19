@@ -45,7 +45,6 @@
 <%@include file="../common/topNav.jspf" %>
 <div class="main">
   <div class="main-part">
-    <%@include file="common/head.jsp" %>
     <div class="manager">
       <div class="pull-left wrap">
         <h2><img src="../assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>
@@ -78,12 +77,10 @@
                           <div class="row1">
                               <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
                               <label for="checkbox-1a">置顶</label>
-                              <span><a href="" >编辑</a></span>
                           </div>
                           <div class="row2">
                               <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
                               <label for="checkbox-2a">可见</label>
-                              <span><a href="">编辑</a></span>
                           </div>
                       </fieldset>
                       <div class="pub2-title">文章分类</div>
@@ -124,52 +121,11 @@
                   </form>
               </div>
               <div class="cli-pub1">
-                  <button id="pre-see" class="col-sm-5">预览</button>
-                  <div class="col-sm-1"></div>
+                  <div class="col-sm-7"></div>
                   <button id="publish" class="col-sm-5">发布</button>
                   <div class="clearfix"></div>
               </div>
           </div>
-          <%--<div class="margin-top-30"></div>--%>
-          <%--<div class="pub2">--%>
-              <%--<div class="pub2-title">文章分类</div>--%>
-              <%--<div class="pub1-content">--%>
-                  <%--<form>--%>
-                      <%--<fieldset data-role="controlgroup">--%>
-                          <%--<div class="row1">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-1b" class="custom" />--%>
-                              <%--<label for="radio-1b"> HTML </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row2">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-2b" class="custom" />--%>
-                              <%--<label for="radio-2b"> CSS </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row3">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-3b" class="custom" />--%>
-                              <%--<label for="radio-3b"> HTML </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row4">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-4b" class="custom" />--%>
-                              <%--<label for="radio-4b"> CSS </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row5">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-5b" class="custom" />--%>
-                              <%--<label for="radio-5b"> HTML </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row6">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-6b" class="custom" />--%>
-                              <%--<label for="radio-6b"> CSS </label>--%>
-                          <%--</div>--%>
-                          <%--<div class="row7">--%>
-                              <%--<input type="radio" name="radio-1b" id="radio-7b" class="custom" />--%>
-                              <%--<label for="radio-7b"> CSS </label>--%>
-                          <%--</div>--%>
-
-
-                      <%--</fieldset>--%>
-                  <%--</form>--%>
-              <%--</div>--%>
-          <%--</div>--%>
       </div>
 
       <div class="clearfix"></div>

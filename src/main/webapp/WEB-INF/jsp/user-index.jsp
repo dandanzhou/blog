@@ -22,7 +22,7 @@
         <%@include file="manager/common/head.jsp" %>
         <div class="manager">
             <div class="pull-left wrap">
-                <h2><img src="../assets/images/write.png" style="margin-right: 10px;">文章<a href="write.jsp" class="add-new-h2">写文章</a> </h2>
+                <h2><img src="../assets/images/write.png" style="margin-right: 10px;">文章<a href="write" class="add-new-h2">写文章</a> </h2>
                 <ul class="sub">
                     <li class="all">
                         <a href="" class="current">全部<span class="count">（）</span>|</a>
