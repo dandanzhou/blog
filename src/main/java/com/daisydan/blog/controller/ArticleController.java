@@ -29,10 +29,10 @@ public class ArticleController extends BaseController {
     @RequestMapping(value = "/saveOrUpdate", method = RequestMethod.POST)
     public String saveOrUpdate(Article article) {
         if (StringUtils.isEmpty(article.getId())) {
-            articleDao.create(article);
-        } else {
             article.setCreateTime(new Date());
             article.setUserId(ContextUtils.getUserId(request));
+            articleDao.create(article);
+        } else {
             articleDao.update(article);
         }
         return "redirect:/";
