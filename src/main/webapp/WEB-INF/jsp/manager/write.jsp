@@ -73,7 +73,7 @@
           <div class="pub1">
               <div class="pub1-title">文章发布</div>
               <div class="pub1-content">
-                  <form>
+                  <form id="" action="">
                       <fieldset data-role="controlgroup">
                           <div class="row1">
                               <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
@@ -86,7 +86,6 @@
                               <span><a href="">编辑</a></span>
                           </div>
                       </fieldset>
-                      <div class="rotted"></div>
                       <div class="pub2-title">文章分类</div>
                       <fieldset data-role="controlgroup">
                           <div class="col-sm-6">
@@ -100,25 +99,25 @@
                               </div>
                               <div class="row3">
                                   <input type="radio" name="radio-1b" id="radio-3b" class="custom" />
-                                  <label for="radio-3b"> HTML </label>
+                                  <label for="radio-3b">JQuery</label>
                               </div>
                               <div class="row4">
                                   <input type="radio" name="radio-1b" id="radio-4b" class="custom" />
-                                  <label for="radio-4b"> CSS </label>
+                                  <label for="radio-4b">其他</label>
                               </div>
                           </div>
                           <div class="col-sm-6">
                               <div class="row5">
                                   <input type="radio" name="radio-1b" id="radio-5b" class="custom" />
-                                  <label for="radio-5b"> HTML </label>
+                                  <label for="radio-5b">JavaScript </label>
                               </div>
                               <div class="row6">
                                   <input type="radio" name="radio-1b" id="radio-6b" class="custom" />
-                                  <label for="radio-6b"> CSS </label>
+                                  <label for="radio-6b">Node.js </label>
                               </div>
                               <div class="row7">
                                   <input type="radio" name="radio-1b" id="radio-7b" class="custom" />
-                                  <label for="radio-7b"> CSS </label>
+                                  <label for="radio-7b">Java </label>
                               </div>
                           </div>
                           <div class="clearfix"></div>
