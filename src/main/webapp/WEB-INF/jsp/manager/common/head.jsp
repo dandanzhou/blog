@@ -17,7 +17,6 @@
     <ul class="list-inline">
       <li><a href="user-index">所有文章</a></li>
       <li><a href="write">写文章</a></li>
-      <li><a href="">编辑文章</a></li>
     </ul>
   </div>
   <div class="clearfix"></div>
