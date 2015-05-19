@@ -1,5 +1,6 @@
 package com.daisydan.blog.web;
 
+import com.daisydan.blog.enums.ArticleType;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.ServletContext;
@@ -26,6 +27,7 @@ public class ServletListener implements ServletContextListener {
 
         ServletContext context = servletContextEvent.getServletContext();
         context.setAttribute("appName", "Skeleton");
+        context.setAttribute(ArticleType.class.getSimpleName(), ArticleType.values());
 
     }
 
