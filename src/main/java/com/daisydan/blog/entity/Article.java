@@ -24,7 +24,7 @@ public class Article {
     @Column(length = 1000)
     private String content;
 
-    private Date phTime;
+    private Date createTime;
 
     @Column(columnDefinition = "boolean default false", nullable = false)
     private boolean enable;
@@ -33,4 +33,7 @@ public class Article {
     private boolean top;
 
     private ArticleType type;
+
+    //发布人
+    private String userId;
 }

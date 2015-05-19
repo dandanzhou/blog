@@ -50,12 +50,12 @@
                 <h2><img src="../assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>
 
                 <div class="margin-top-10"></div>
-                <form name="post" action="" method="post" id="post">
+                <form name="post" action="/article/saveOrUpdate" method="post" id="post">
                     <div class="control-group">
                         <label class="col-sm-1 control-label">Title:</label>
 
                         <div class="col-sm-11 controls">
-                            <input type="text" id="title" placeholder="Type your title">
+                            <input type="text" name="title" placeholder="Type your title">
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -64,7 +64,7 @@
                         <label class="col-sm-1 control-label" for="post_body">Body</label>
 
                         <div class="col-sm-11 controls">
-                            <textarea id="post_body" name="body" class="textarea"
+                            <textarea id="post_body" name="content" class="textarea"
                                       placeholder="Type your post"></textarea>
                         </div>
                         <div class="clearfix"></div>
@@ -83,18 +83,19 @@
                         <label class="col-sm-1 control-label">操作</label>
 
                         <div class="row1">
-                            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom"/>
+                            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top" class="custom"/>
                             <label for="checkbox-1a">置顶</label>
                         </div>
                         <div class="row2">
-                            <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" checked/>
+                            <input type="checkbox" name="checkbox-2a" name="enable" id="checkbox-2a" class="custom"
+                                   checked/>
                             <label for="checkbox-2a">可见</label>
                         </div>
                         <div class="clearfix"></div>
                     </div>
 
                     <div class="control-group">
-                        <button id="publish" class="col-sm-5">发布</button>
+                        <button type="submit" class="col-sm-5">发布</button>
                     </div>
                 </form>
             </div>
