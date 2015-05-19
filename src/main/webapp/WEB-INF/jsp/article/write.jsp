@@ -81,15 +81,9 @@
                     </div>
                     <div class="control-group">
                         <label class="col-sm-1 control-label">操作</label>
-
                         <div class="row1">
                             <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top" class="custom"/>
                             <label for="checkbox-1a">置顶</label>
-                        </div>
-                        <div class="row2">
-                            <input type="checkbox" name="checkbox-2a" name="enable" id="checkbox-2a" class="custom"
-                                   checked/>
-                            <label for="checkbox-2a">可见</label>
                         </div>
                         <div class="clearfix"></div>
                     </div>

@@ -27,9 +27,6 @@ public class Article {
     private Date createTime;
 
     @Column(columnDefinition = "boolean default false", nullable = false)
-    private boolean enable;
-
-    @Column(columnDefinition = "boolean default false", nullable = false)
     private boolean top;
 
     private ArticleType type;
