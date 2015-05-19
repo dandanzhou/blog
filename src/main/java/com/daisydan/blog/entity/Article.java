@@ -1,5 +1,6 @@
 package com.daisydan.blog.entity;
 
+import com.daisydan.blog.enums.ArticleType;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -30,4 +31,6 @@ public class Article {
 
     @Column(columnDefinition = "boolean default false", nullable = false)
     private boolean top;
+
+    private ArticleType type;
 }
