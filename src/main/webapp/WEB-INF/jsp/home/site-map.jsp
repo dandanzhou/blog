@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="pull-left">
-        <%@include file="common/sidebar.jsp" %>
+        <%@include file="../common/sidebar.jsp" %>
       </div>
       <div class="clearfix"></div>
     </div>
