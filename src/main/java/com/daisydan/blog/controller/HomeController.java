@@ -1,5 +1,6 @@
 package com.daisydan.blog.controller;
 
+import com.daisydan.blog.dao.ArticleDao;
 import com.daisydan.blog.dao.UserDao;
 import com.daisydan.blog.entity.User;
 import com.daisydan.blog.service.UserService;
@@ -32,11 +33,14 @@ public class HomeController extends BaseController {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private ArticleDao articleDao;
+
 
     @RequestMapping("/")
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("/index");
-        modelAndView.addObject("users", userService.findAll());
+        modelAndView.addObject("articles", articleDao.findAll());
         return modelAndView;
     }
 
