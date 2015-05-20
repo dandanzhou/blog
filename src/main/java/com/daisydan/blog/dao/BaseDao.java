@@ -1,5 +1,6 @@
 package com.daisydan.blog.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +54,16 @@ public abstract class BaseDao<T> {
     public void flush() {
         getCurrentSession().flush();
     }
+
+    public void deleteAll() {
+        Query query = getCurrentSession().createQuery("delete from " + entityClass.getSimpleName());
+        query.executeUpdate();
+    }
+
+    public int count() {
+        Query query = getCurrentSession().createQuery("select count(*) from " + entityClass.getSimpleName());
+        return ((Long) query.uniqueResult()).intValue();
+    }
+
 
 }

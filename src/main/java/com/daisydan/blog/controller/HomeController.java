@@ -2,19 +2,22 @@ package com.daisydan.blog.controller;
 
 import com.daisydan.blog.dao.ArticleDao;
 import com.daisydan.blog.dao.UserDao;
+import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.entity.User;
+import com.daisydan.blog.rest.PageInfo;
+import com.daisydan.blog.rest.RestData;
+import com.daisydan.blog.security.LoginRequired;
 import com.daisydan.blog.service.UserService;
 import com.daisydan.blog.utils.ContextUtils;
 import com.daisydan.blog.utils.WebUtils;
 import com.daisydan.blog.validator.InvalidException;
-import com.daisydan.blog.rest.RestData;
-import com.daisydan.blog.security.LoginRequired;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -38,9 +41,12 @@ public class HomeController extends BaseController {
 
 
     @RequestMapping("/")
-    public ModelAndView index() {
+    public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo) {
         ModelAndView modelAndView = new ModelAndView("/index");
-        modelAndView.addObject("articles", articleDao.findAll());
+        PageInfo<Article> pageInfo = new PageInfo<>(pageNo, 4);
+        pageInfo.setTotalRows(articleDao.count());
+        pageInfo.setResultList(articleDao.list(pageInfo.getStartRow(), 4));
+        modelAndView.addObject("pageInfo", pageInfo);
         return modelAndView;
     }
 
@@ -143,7 +149,6 @@ public class HomeController extends BaseController {
     public String getDetails() {
         return "/home/details";
     }
-
 
 
 }

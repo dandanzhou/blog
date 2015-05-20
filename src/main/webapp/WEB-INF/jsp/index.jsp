@@ -16,7 +16,6 @@
     </c:choose>
 </head>
 <body>
-</body>
 <%@include file="common/topNav.jspf" %>
 <div class="main-part">
     <div class="container">
@@ -26,7 +25,7 @@
             <div class="pull-left">
                 <div class="margin-top-20"></div>
                 <div id="main">
-                    <c:forEach var="article" items="${articles}">
+                    <c:forEach var="article" items="${pageInfo.resultList}">
                         <section class="post">
                             <h1 class="title"><a href="/article/${article.id}"
                                                  title="${article.title}">${article.title}</a></h1>
@@ -52,7 +51,9 @@
                             </p>
                         </section>
                     </c:forEach>
-
+                    <div class="margin-left-30 margin-top-30">
+                        <ul id="paginator"></ul>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -66,5 +67,10 @@
 </div>
 
 <%@include file="common/footer.jspf" %>
-
+</body>
+<script type="text/javascript">
+    seajs.use("pages/index", function (index) {
+        index.init(${pageInfo.pageNo}, ${pageInfo.totalPages});
+    });
+</script>
 </html>

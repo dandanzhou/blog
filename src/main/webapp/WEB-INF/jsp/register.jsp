@@ -83,7 +83,7 @@
 <%@include file="common/footer.jspf" %>
 
 <script type="text/javascript">
-    seajs.use("pages-src/register");
+    seajs.use("pages/register");
 </script>
 
 </body>
