@@ -43,9 +43,9 @@ button#submit {
     padding: 8px;
     font-weight: bold;
 }
-.row1,.row2,.row3,.row4,.row5,.row6,.row7 {
-    margin: 20px;
-}
 .cli-pub1 {
     margin-left: 20px;
+}
+label.op-title {
+    padding-right: 18px;
 }
