@@ -6,8 +6,10 @@ import com.daisydan.blog.utils.ContextUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
@@ -36,5 +38,16 @@ public class ArticleController extends BaseController {
             articleDao.update(article);
         }
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ModelAndView getArticle(@PathVariable(value = "id") String id) {
+        Article article = articleDao.find(id);
+        if (null == article) {
+            return new ModelAndView("/misc/404");
+        }
+        ModelAndView modelAndView = new ModelAndView("/article/details");
+        modelAndView.addObject("article", article);
+        return modelAndView;
     }
 }
