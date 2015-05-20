@@ -31,8 +31,8 @@
                             <h1 class="title"><a href="/article/${article.id}"
                                                  title="${article.title}">${article.title}</a></h1>
                             <a class="post-date" href="/article/${article.id}">
-                                <span class="month">Oct</span>
-                                <span class="day">26</span>
+                                <span class="month"><fmt:formatDate value="${article.createTime}" pattern="MM"/></span>
+                                <span class="day"><fmt:formatDate value="${article.createTime}" pattern="dd"/></span>
                             </a>
 
                             <div class="alpha-post">
