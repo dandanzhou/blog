@@ -1,6 +1,8 @@
 package com.daisydan.blog.web;
 
 import com.daisydan.blog.enums.ArticleType;
+import com.daisydan.blog.utils.ApplicationUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.ServletContext;
@@ -17,6 +19,9 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class ServletListener implements ServletContextListener {
 
+    @Autowired
+    private ApplicationUtils appUtils;
+
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
@@ -28,6 +33,7 @@ public class ServletListener implements ServletContextListener {
         ServletContext context = servletContextEvent.getServletContext();
         context.setAttribute("appName", "Skeleton");
         context.setAttribute(ArticleType.class.getSimpleName(), ArticleType.values());
+        context.setAttribute("appUtils",appUtils);
 
     }
 

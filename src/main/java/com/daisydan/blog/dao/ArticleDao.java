@@ -2,6 +2,7 @@ package com.daisydan.blog.dao;
 
 
 import com.daisydan.blog.entity.Article;
+import com.daisydan.blog.enums.ArticleType;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +25,12 @@ public class ArticleDao extends BaseDao<Article> {
         query.setFirstResult(start);
         query.setMaxResults(end);
         return query.list();
+    }
+
+    public int countByType(ArticleType type) {
+        Query query = getCurrentSession().createQuery("select count(*) from Article as article where article.type = :type");
+        query.setInteger("type", type.ordinal());
+        return ((Long) query.uniqueResult()).intValue();
     }
 
 }
