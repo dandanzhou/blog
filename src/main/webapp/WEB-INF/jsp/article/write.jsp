@@ -45,11 +45,11 @@
 <%@include file="../common/topNav.jspf" %>
 <div class="main">
     <div class="main-part">
-        <div class="manager">
-            <div class="pull-left wrap">
+        <div class="container">
+            <div class="row">
                 <h2><img src="../assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>
 
-                <div class="margin-top-10"></div>
+                <div class="margin-top-30"></div>
                 <form name="post" action="/article/saveOrUpdate" method="post" id="post">
                     <div class="control-group">
                         <label class="col-sm-1 control-label">Title:</label>
@@ -70,28 +70,39 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="control-group">
-                        <label class="col-sm-1 control-label">文章分类</label>
-                        <select name="type">
-                            <c:forEach var="articleType" items="${ArticleType}">
-                                <option>${articleType}</option>
-                            </c:forEach>
-                        </select>
+                        <label class="col-sm-1 control-label">options:</label>
 
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="control-group">
-                        <label class="col-sm-1 control-label">操作</label>
-                        <div class="row1">
-                            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top" class="custom"/>
-                            <label for="checkbox-1a">置顶</label>
+                        <div class="col-sm-11 controls">
+                            <div class="col-sm-4">
+                                <label class="op-title">分类</label>
+                                <select name="type">
+                                    <c:forEach var="articleType" items="${ArticleType}">
+                                        <option>${articleType}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <label class="pull-left op-title">操作</label>
+                                <div class="pull-left">
+                                    <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top" class="custom"/>
+                                    <label for="checkbox-1a">置顶</label>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
+
                         <div class="clearfix"></div>
                     </div>
 
+                    <div class="margin-top-30"></div>
                     <div class="control-group">
-                        <button type="submit" class="col-sm-5">发布</button>
+                        <div class="col-md-10"></div>
+                        <button type="submit" class="col-md-2 btn-pub">发布</button>
+                        <div class="clearfix"></div>
                     </div>
                 </form>
+
+                <div class="margin-top-30"></div>
             </div>
         </div>
     </div>
