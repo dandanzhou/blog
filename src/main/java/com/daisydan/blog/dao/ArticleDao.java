@@ -53,8 +53,7 @@ public class ArticleDao extends BaseDao<Article> {
             criteria.add(Restrictions.eq("type", type));
         }
 
-
-        criteria.addOrder(Order.asc("top"));
+        criteria.addOrder(Order.desc("top"));
         criteria.addOrder(Order.desc("createTime"));
         if (StringUtils.isNotEmpty(key)) {
             criteria.add(Restrictions.disjunction()

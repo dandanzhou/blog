@@ -87,9 +87,9 @@
                                 <label class="pull-left op-title">操作</label>
 
                                 <div class="pull-left">
-                                    <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top"
+                                    <input type="checkbox" name="top"
                                            class="custom"/>
-                                    <label for="checkbox-1a">置顶</label>
+                                    <label>置顶</label>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
