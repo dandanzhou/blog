@@ -2,6 +2,7 @@ package com.daisydan.blog.utils;
 
 import com.daisydan.blog.dao.ArticleDao;
 import com.daisydan.blog.dao.CommentDao;
+import com.daisydan.blog.dao.UserDao;
 import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.enums.ArticleType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class ApplicationUtils {
     @Autowired
     private CommentDao commentDao;
 
+    @Autowired
+    private UserDao userDao;
+
     public int countByType(ArticleType type) {
         return articleDao.countByType(type);
     }
@@ -42,5 +46,9 @@ public class ApplicationUtils {
 
     public List<Article> getHotArticle() {
         return articleDao.getHotArticle();
+    }
+
+    public String getUserNameById(String userId) {
+        return userDao.find(userId).getUserName();
     }
 }

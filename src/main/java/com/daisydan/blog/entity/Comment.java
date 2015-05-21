@@ -23,4 +23,6 @@ public class Comment {
     private String content;
 
     private Date createTime;
+
+    private String articleId;
 }

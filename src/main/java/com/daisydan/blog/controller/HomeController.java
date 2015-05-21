@@ -45,8 +45,8 @@ public class HomeController extends BaseController {
     public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, ArticleType type, String key) {
         ModelAndView modelAndView = new ModelAndView("/index");
         PageInfo<Article> pageInfo = new PageInfo<>(pageNo, 4);
-        pageInfo.setTotalRows(articleDao.countBySearch(type,key));
-        pageInfo.setResultList(articleDao.listBySearch(pageInfo.getStartRow(), 4, type,key));
+        pageInfo.setTotalRows(articleDao.countBySearch(type, key));
+        pageInfo.setResultList(articleDao.listBySearch(pageInfo.getStartRow(), 4, type, key));
         modelAndView.addObject("pageInfo", pageInfo);
         return modelAndView;
     }
@@ -122,22 +122,10 @@ public class HomeController extends BaseController {
         }
     }
 
-    @RequestMapping(value = "/user-index", method = RequestMethod.GET)
-    @LoginRequired
-    public String getAccount() {
-        return "/user-index";
-    }
-
 
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String getAbout() {
         return "/home/about";
-    }
-
-
-    @RequestMapping(value = "/site-map", method = RequestMethod.GET)
-    public String getSiteMap() {
-        return "/home/site-map";
     }
 
 
@@ -146,9 +134,10 @@ public class HomeController extends BaseController {
         return "/home/messages";
     }
 
-    @RequestMapping(value = "/details", method = RequestMethod.GET)
-    public String getDetails() {
-        return "/home/details";
+    @RequestMapping("logout")
+    public String logout() {
+        request.getSession().invalidate();
+        return "redirect:/";
     }
 
 

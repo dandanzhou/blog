@@ -47,46 +47,64 @@
                         </div>
                     </article>
                     <div id="comments">
-                        <h4>仅 1 条评论</h4>
+                        <h4>${article.commentCount} 条评论</h4>
                         <ol class="comment-list">
-                            <li class="comment by-user parent">
-                                <div class="comment-body clearfix">
-                                    <a class="comment-author" title="少壮" href="http://shaozhuang.me" target="_blank"
-                                       rel="external nofollow">
-                                        <img class="avatar"
-                                             src="//dn-astc.qbox.me/avatar/b0d4c88baf0ebdf9b724fcd6694082de.60" alt="少壮"
-                                             width="60" height="60"> <span class="author">少壮</span>
-                                    </a>
-
-                                    <div class="comment-main">
-                                        <div class="comment-box">
-                                            <div class="comment-content">学习一下～</div>
-                                            <p class="comment-meta">
-                                                <span><a href="#reply-2396">回复</a></span>
-                                                <span>2014-10-26 14:09</span>
-                                                <span></span>
-                                            </p>
-                                        </div>
+                            <c:if test="${not empty error}">
+                                <div class="form-group">
+                                    <div class="alert alert-danger"
+                                         role="alert">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                            ${error}
                                     </div>
                                 </div>
-                                <ul class="children"></ul>
-                            </li>
+                            </c:if>
+                            <c:choose>
+                                <c:when test="${article.commentCount > 0}">
+                                    <c:forEach items="${comments}" var="comment">
+
+                                        <li class="comment by-user parent">
+                                            <div class="comment-body clearfix">
+                                                <a class="comment-author"
+                                                   target="_blank"
+                                                   rel="external nofollow">
+                                                   <span
+                                                           class="author">${appUtils.getUserNameById(article.userId)}</span>
+                                                </a>
+
+                                                <div class="comment-main">
+                                                    <div class="comment-box">
+                                                        <div class="comment-content">${comment.content}</div>
+                                                        <p class="comment-meta">
+                                                            <span>${comment.createTime}</span>
+                                                            <span></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="children"></ul>
+                                        </li>
+                                    </c:forEach>
+                                </c:when>
+                                <c:otherwise>
+                                    暂无评论
+                                </c:otherwise>
+                            </c:choose>
+
                         </ol>
                         <div class="margin-top-30"></div>
                         <div id="comment-form">
                             <h3 class="response">发表评论
-                                <small><a id="cancel-comment-reply-link"
-                                          href="https://blog.alphatr.com/my-web-dev-environment-1.html" rel="nofollow"
-                                          style="display:none">取消回复</a></small>
                             </h3>
-                            <form method="post" action="https://blog.alphatr.com/my-web-dev-environment-1.html/comment"
-                                  novalidate="">
+
+                            <form method="post" action="/comment/post">
+                                <input name="articleId" value="${article.id}" hidden/>
+
                                 <div class="form-cell text">
-                                    <textarea name="text" type="chinese" required=""></textarea>
+                                    <textarea name="content"></textarea>
                                 </div>
                                 <div class="form-cell submit">
                                     <span class="form-tips"></span>
-                                    <button type="submit" name="submit" disabled="">发表评论</button>
+                                    <button type="submit" name="submit">发表评论</button>
                                 </div>
                             </form>
               <textarea id="comment-tpl" style="display: none;">

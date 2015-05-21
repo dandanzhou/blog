@@ -1,6 +1,7 @@
 package com.daisydan.blog.controller;
 
 import com.daisydan.blog.dao.ArticleDao;
+import com.daisydan.blog.dao.CommentDao;
 import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.utils.ContextUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -23,6 +24,9 @@ public class ArticleController extends BaseController {
     @Autowired
     private ArticleDao articleDao;
 
+    @Autowired
+    private CommentDao commentDao;
+
     @RequestMapping(value = "/write", method = RequestMethod.GET)
     public String getWrite() {
         return "/article/write";
@@ -41,13 +45,21 @@ public class ArticleController extends BaseController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ModelAndView getArticle(@PathVariable(value = "id") String id) {
+    public ModelAndView getArticle(@PathVariable(value = "id") String id, String error) {
         Article article = articleDao.find(id);
         if (null == article) {
             return new ModelAndView("/misc/404");
         }
         ModelAndView modelAndView = new ModelAndView("/article/details");
         modelAndView.addObject("article", article);
+        if (article.getCommentCount() > 0) {
+            modelAndView.addObject("comments", commentDao.listByArticleId(id));
+        }
+        if (StringUtils.isNotEmpty(error)) {
+            modelAndView.addObject("error", error);
+        }
         return modelAndView;
     }
+
+
 }
