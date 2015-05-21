@@ -31,7 +31,13 @@
     </div>
     <div class="discuss">
         <div class="green1">热门文章</div>
-        <div class="some"></div>
+        <div class="some">
+            <ul>
+                <c:forEach var="article" items="${appUtils.getHotArticle()}">
+                    <li><a href="/article/${article.id}" target="_blank">${article.title}</a></li>
+                </c:forEach>
+            </ul>
+        </div>
     </div>
     <div class="fr-link">
         <div class="green1">友情链接</div>
