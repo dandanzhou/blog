@@ -47,9 +47,9 @@
         <div class="green1">网站统计</div>
         <div class="some">
             <ul>
-                <li>● 文章统计 ：</li>
-                <li>● 最后发表 ：</li>
-                <li>● 评论统计 ：</li>
+                <li>● 文章统计 ：${appUtils.countArticle()}</li>
+                <li>● 最后发表 ：${appUtils.getLastArticleTime()}</li>
+                <li>● 评论统计 ：${appUtils.getCommentCount()}</li>
             </ul>
         </div>
     </div>

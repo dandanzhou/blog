@@ -33,4 +33,6 @@ public class Article {
 
     //发布人
     private String userId;
+
+    private int commentCount;
 }

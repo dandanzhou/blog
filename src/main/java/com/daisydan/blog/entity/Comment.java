@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -16,15 +17,10 @@ public class Comment {
     @Column(length = 32)
     private String id;
 
-    @Column(length = 32)
-    private String articleID;
-
-    @Column(length = 20)
-    private String person;
-
-    @Column(length = 40)
-    private String reTitle;
+    private String userId;
 
     @Column(length = 2000)
-    private String reContent;
+    private String content;
+
+    private Date createTime;
 }
