@@ -1042,3 +1042,22 @@ footer .text-version {
         margin-right: 0px;
     }
 }
+
+.btn-ce{
+    background-color: #ebcccc;
+    width: 110px;
+}
+.btn-re{
+    background-color: #f7ecb5;
+    width: 110px;
+    margin-left: 40px;
+}
+.wel-title{
+    font-size: x-large;
+    font-weight: bold;
+    color: #707070;
+    margin: 6% 36%;
+}
+.cen{
+    margin-left: 10%;
+}

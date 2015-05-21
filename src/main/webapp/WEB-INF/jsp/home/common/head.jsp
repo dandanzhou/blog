@@ -17,8 +17,8 @@
             <div class="col-md-8">
                 <div class="margin-top-20"></div>
                 <div class="link">
-                    <div class="col-sm-2"><a href="/about">About</a></div>
                     <div class="col-sm-2"><a href="/">Home</a></div>
+                    <div class="col-sm-2"><a href="/about">About</a></div>
                     <div class="col-sm-8"><a href="/messages">留言板</a></div>
                     <div class="clearfix"></div>
                 </div>
