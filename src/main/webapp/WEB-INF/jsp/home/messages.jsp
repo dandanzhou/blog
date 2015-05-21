@@ -37,9 +37,10 @@
                             <h5>我的信息如下：</h5>
                             <ul>
                                 <li>名称：果丹皮 的博客</li>
-                                <li>链接：<a title="http://blog.daisydan.com/" href="http://blog.daisydan.com/">http://blog.daisydan.com/</a>
-                                </li>
                                 <li>描述：不止关注 Web 前端开发</li>
+                                <li>github链接：
+                                    <a title="https://github.com/dandanzhou" href="https://github.com/dandanzhou" target="_blank">https://github.com/dandanzhou</a>
+                                </li>
                             </ul>
                         </div>
                     </article>
