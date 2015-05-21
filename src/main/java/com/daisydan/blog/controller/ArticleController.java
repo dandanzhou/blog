@@ -40,6 +40,15 @@ public class ArticleController extends BaseController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String getDelete(@PathVariable(value = "id") String id) {
+        Article article = articleDao.find(id);
+        if (null != article) {
+            articleDao.delete(article);
+        }
+        return "redirect:/";
+    }
+
 
     @RequestMapping(value = "/saveOrUpdate", method = RequestMethod.POST)
     public String saveOrUpdate(Article article) {

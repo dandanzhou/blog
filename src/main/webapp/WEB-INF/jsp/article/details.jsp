@@ -47,6 +47,8 @@
 
                             <c:if test="${SessionUtils.user != null}">
                                 <p><a href="/article/edit/${article.id}">编辑</a></p>
+
+                                <p><a href="/article/delete/${article.id}">删除</a></p>
                             </c:if>
                         </div>
                     </article>
