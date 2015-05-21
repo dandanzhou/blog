@@ -7,7 +7,7 @@
 <body>
 <%@include file="common/topNav.jspf" %>
 <div class="container">
-
+    <div class="margin-top-30"></div>
     <div class="wel-title">Welcome to my blog!</div>
     <div class="cen">
         <form class="form-horizontal" id="form_login" role="form" action="/login" method="POST">

@@ -61,8 +61,7 @@
     position: relative;
     display: block;
     float: left;
-    height: 72px;
-    width: 72px;
+    margin: 25px;
 }
 #comments .comment-author img.avatar {
     position: absolute;
@@ -148,7 +147,7 @@
     height: 30px;
     line-height: 28px;
     padding: 0 15px;
-    margin: 0;
+    margin-right: 6.2px;
 }
 button, input {
     font-family: '微软雅黑', '宋体';
@@ -174,7 +173,7 @@ button, input {
     color: #252930;
     border-radius: 2px;
     padding: 3px 5px;
-    padding-left: 35px;
+    padding-left: 3px;
     margin: 0 -6px;
     line-height: 20px;
     width: 100%;

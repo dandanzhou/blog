@@ -30,7 +30,7 @@
                         <h1 class="title">留言板</h1>
 
                         <div class="entry alpha-post">
-                            <p>对我有什么好的建议或意见，请留言，或直接 <a href="http://blog.daisydan.com/about">联系我</a>。</p>
+                            <p>对我有什么好的建议或意见，请留言或发我QQ(2205502584)。</p>
 
                             <p>欢迎优秀的博客来和我做朋友。</p>
 

@@ -37,20 +37,14 @@
               <h4>关于我</h4>
               <p>果丹皮，或者可以叫我 丹丹，90后，Web 前端开发，爱好计算机，爱好互联网；会点 Photoshop；有时候也做做设计，志在掌握 Web 产品的每个环节；大家可以通过邮箱和博客留言的方式联系我。</p>
 
-              <h5>关于头像</h5>
-              <p>留言后会根据电子邮件地址自动匹配头像，并显示在留言窗口的左侧。如想使用此功能需要在 <a href="http://www.gravatar.com/" target="_blank">Gravatar</a>
-                注册并上传头像。之后，凡是支持 <strong>Gravatar</strong> 的地方都可以显示你的头像。
-              </p>
 
               <h5>关于留言</h5>
-              <p>本站会尊重每一条留言。除广告和恶意留言外，不会删除留言。如果你的留言没有显示，请稍等，我们会人工审核。</p>
+              <p>本站会尊重每一条留言。所以您也要对您的留言负责哦，除广告和恶意留言外，不会删除留言。</p>
 
               <h4>联系方式</h4>
               <ul style="list-style-type:none">
                 <li style="margin: 10px 0;">联系邮箱：daisyzhou@gmail.com；</li>
-                <li style="margin: 10px 0;">联系 QQ：<a href="http://sighttp.qq.com/authd?IDKEY=73fbb92445ecb0857a17b0784b5c2b5c12239ddf8fe91e2a" target="_blank">点这里给我发消息</a>；</li>
-                <li style="margin: 10px 0;">网页留言：<a title="留言版" href="http://blog.daisydan.com/messages">http://blog.daisydan.com/messages</a>；</li>
-                <li style="margin: 10px 0;">所有文章列表：<a href="http://blog.daisydan.com/sitemap" title="Rss订阅">http://blog.daisydan.com/sitemap</a>；</li>
+                <li style="margin: 10px 0;">联系 QQ：2205502584；</li>
               </ul>
             </div>
           </article>

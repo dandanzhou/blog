@@ -46,9 +46,15 @@
                                     href="/">果丹皮 的博客</a></p>
 
                             <c:if test="${SessionUtils.user != null}">
-                                <p><a href="/article/edit/${article.id}">编辑</a></p>
-
-                                <p><a href="/article/delete/${article.id}">删除</a></p>
+                                <div>
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-4">
+                                        <div class="col-sm-4"><a href="/article/edit/${article.id}">编辑</a></div>
+                                        <div class="col-sm-4"><a href="/article/delete/${article.id}">删除</a></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </c:if>
                         </div>
                     </article>

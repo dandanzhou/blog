@@ -36,7 +36,7 @@
         <div class="some">
             <ul>
                 <c:forEach var="article" items="${appUtils.getHotArticle()}">
-                    <li><a href="/article/${article.id}" target="_blank">${article.title}</a></li>
+                    <li><a href="/article/${article.id}" target="_blank">● ${article.title}</a></li>
                 </c:forEach>
             </ul>
         </div>
