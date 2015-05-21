@@ -48,6 +48,7 @@
                 <li><a href="http://veryyoung.me/" target="_blank">● veryyoung</a></li>
                 <li><a href="http://www.minishine.com/" target="_blank">● 路人戊</a></li>
                 <li><a href="http://www.zhenghang.info/" target="_blank">● coco</a></li>
+                <li><a href="https://github.com/dandanzhou" target="_blank">● my github</a></li>
             </ul>
         </div>
     </div>
