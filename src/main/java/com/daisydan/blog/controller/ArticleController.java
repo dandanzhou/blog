@@ -51,7 +51,10 @@ public class ArticleController extends BaseController {
 
 
     @RequestMapping(value = "/saveOrUpdate", method = RequestMethod.POST)
-    public String saveOrUpdate(Article article) {
+    public String saveOrUpdate(Article article, String top) {
+        if ("on".equals(top)) {
+            article.setTop(true);
+        }
         if (StringUtils.isEmpty(article.getId())) {
             article.setCreateTime(new Date());
             article.setUserId(ContextUtils.getUserId(request));
@@ -60,6 +63,7 @@ public class ArticleController extends BaseController {
             Article storedArticle = articleDao.find(article.getId());
             storedArticle.setContent(article.getContent());
             storedArticle.setTitle(article.getTitle());
+            storedArticle.setTop(article.isTop());
             articleDao.update(storedArticle);
         }
         return "redirect:/";
