@@ -47,15 +47,17 @@
     <div class="main-part">
         <div class="container">
             <div class="row">
-                <h2><img src="../assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>
+                <h2><img src="/assets/images/write.png" style="margin-right: 10px;">撰写新文章</h2>
 
                 <div class="margin-top-30"></div>
                 <form name="post" action="/article/saveOrUpdate" method="post" id="post">
+                    <input name="id" value="${article.id}" hidden/>
+
                     <div class="control-group">
                         <label class="col-sm-1 control-label">Title:</label>
 
                         <div class="col-sm-11 controls">
-                            <input type="text" name="title" placeholder="Type your title">
+                            <input type="text" name="title" placeholder="Type your title" value="${article.title}">
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -65,7 +67,7 @@
 
                         <div class="col-sm-11 controls">
                             <textarea id="post_body" name="content" class="textarea"
-                                      placeholder="Type your post"></textarea>
+                                      placeholder="Type your post">${article.content}</textarea>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -83,8 +85,10 @@
                             </div>
                             <div class="col-sm-8">
                                 <label class="pull-left op-title">操作</label>
+
                                 <div class="pull-left">
-                                    <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top" class="custom"/>
+                                    <input type="checkbox" name="checkbox-1a" id="checkbox-1a" name="top"
+                                           class="custom"/>
                                     <label for="checkbox-1a">置顶</label>
                                 </div>
                                 <div class="clearfix"></div>

@@ -32,6 +32,15 @@ public class ArticleController extends BaseController {
         return "/article/write";
     }
 
+
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView getEidt(@PathVariable(value = "id") String id) {
+        ModelAndView modelAndView = new ModelAndView("/article/write");
+        modelAndView.addObject("article", articleDao.find(id));
+        return modelAndView;
+    }
+
+
     @RequestMapping(value = "/saveOrUpdate", method = RequestMethod.POST)
     public String saveOrUpdate(Article article) {
         if (StringUtils.isEmpty(article.getId())) {
@@ -39,7 +48,10 @@ public class ArticleController extends BaseController {
             article.setUserId(ContextUtils.getUserId(request));
             articleDao.create(article);
         } else {
-            articleDao.update(article);
+            Article storedArticle = articleDao.find(article.getId());
+            storedArticle.setContent(article.getContent());
+            storedArticle.setTitle(article.getTitle());
+            articleDao.update(storedArticle);
         }
         return "redirect:/";
     }

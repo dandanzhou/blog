@@ -44,6 +44,10 @@
                             <p>转载请注明: <a href="/article/${article.id}"
                                          title="${article.title}">${article.title}</a> | <a
                                     href="/">果丹皮 的博客</a></p>
+
+                            <c:if test="${SessionUtils.user != null}">
+                                <p><a href="/article/edit/${article.id}">编辑</a></p>
+                            </c:if>
                         </div>
                     </article>
                     <div id="comments">
@@ -107,26 +111,7 @@
                                     <button type="submit" name="submit">发表评论</button>
                                 </div>
                             </form>
-              <textarea id="comment-tpl" style="display: none;">
-                &lt;li class="{$cls}"&gt;
-                &lt;div class="comment-body clearfix"&gt;
-                    &lt;a class="comment-author" title="{$author}" href="{$url}" target="_blank" rel="external nofollow"&gt;
-                        &lt;img class="avatar" src="{$avatar}" alt="{$author}" width="60" height="60"&gt;
-                        &lt;span class="author"&gt;{$author}&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;div class="comment-main"&gt;
-                        &lt;div class="comment-box"&gt;
-                            &lt;div class="comment-content"&gt;{$text}&lt;/div&gt;
-                            &lt;p class="comment-meta"&gt;
-                                &lt;span&gt;{$reply}&lt;/span&gt;
-                                &lt;span&gt;{$created}&lt;/span&gt;
-                                &lt;span&gt;{$status}&lt;/span&gt;
-                            &lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-        </textarea>
+
                         </div>
                     </div>
                 </div>
