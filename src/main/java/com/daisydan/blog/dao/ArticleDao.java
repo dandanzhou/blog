@@ -3,6 +3,7 @@ package com.daisydan.blog.dao;
 
 import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.enums.ArticleType;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Order;
@@ -46,7 +47,7 @@ public class ArticleDao extends BaseDao<Article> {
         return query.list();
     }
 
-    public List<Article> listBySearch(int start, int end, ArticleType type) {
+    public List<Article> listBySearch(int start, int end, ArticleType type, String key) {
         Criteria criteria = getCurrentSession().createCriteria(Article.class);
         if (null != type) {
             criteria.add(Restrictions.eq("type", type));
@@ -55,37 +56,28 @@ public class ArticleDao extends BaseDao<Article> {
 
         criteria.addOrder(Order.asc("top"));
         criteria.addOrder(Order.desc("createTime"));
-//        if (StringUtils.isNotEmpty(key)) {
-//            criteria.add(Restrictions.disjunction()
-//                            .add(Restrictions.like("title", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("originalTitle", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("casts", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("directors", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("writers", "%".concat(key).concat("%")))
-//
-//            );
-//        }
+        if (StringUtils.isNotEmpty(key)) {
+            criteria.add(Restrictions.disjunction()
+                            .add(Restrictions.like("title", "%".concat(key).concat("%")))
+                            .add(Restrictions.like("content", "%".concat(key).concat("%")))
+            );
+        }
         criteria.setFirstResult(start);
         criteria.setMaxResults(end);
         return criteria.list();
     }
 
-    public int countBySearch(ArticleType type) {
+    public int countBySearch(ArticleType type, String key) {
         Criteria criteria = getCurrentSession().createCriteria(Article.class).setProjection(Projections.rowCount());
         if (null != type) {
             criteria.add(Restrictions.eq("type", type));
         }
-
-
-//        if (StringUtils.isNotEmpty(key)) {
-//            criteria.add(Restrictions.disjunction()
-//                            .add(Restrictions.like("title", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("originalTitle", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("casts", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("directors", "%".concat(key).concat("%")))
-//                            .add(Restrictions.like("writers", "%".concat(key).concat("%")))
-//            );
-//        }
+        if (StringUtils.isNotEmpty(key)) {
+            criteria.add(Restrictions.disjunction()
+                            .add(Restrictions.like("title", "%".concat(key).concat("%")))
+                            .add(Restrictions.like("content", "%".concat(key).concat("%")))
+            );
+        }
         Long count = (Long) (criteria.uniqueResult());
         return count.intValue();
     }

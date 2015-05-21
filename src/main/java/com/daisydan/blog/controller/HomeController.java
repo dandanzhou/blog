@@ -42,11 +42,11 @@ public class HomeController extends BaseController {
 
 
     @RequestMapping("/")
-    public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, ArticleType type) {
+    public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, ArticleType type, String key) {
         ModelAndView modelAndView = new ModelAndView("/index");
         PageInfo<Article> pageInfo = new PageInfo<>(pageNo, 4);
-        pageInfo.setTotalRows(articleDao.countBySearch(type));
-        pageInfo.setResultList(articleDao.listBySearch(pageInfo.getStartRow(), 4, type));
+        pageInfo.setTotalRows(articleDao.countBySearch(type,key));
+        pageInfo.setResultList(articleDao.listBySearch(pageInfo.getStartRow(), 4, type,key));
         modelAndView.addObject("pageInfo", pageInfo);
         return modelAndView;
     }

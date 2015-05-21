@@ -11,9 +11,9 @@
 <div class="wrapper">
     <div class="serach" id="search-box">
         <div class="widget-content">
-            <form id="search" method="post" action="/">
+            <form method="post" action="/">
                 <fieldset>
-                    <input type="text" name="s" class="text" placeholder="搜索 Search" autocomplete="off">
+                    <input type="text" name="key" class="text" placeholder="搜索 Search" autocomplete="off">
                     <button type="submit"><img src="/assets/images/search.png"></button>
                 </fieldset>
             </form>
