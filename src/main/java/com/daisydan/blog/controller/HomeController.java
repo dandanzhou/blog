@@ -4,6 +4,7 @@ import com.daisydan.blog.dao.ArticleDao;
 import com.daisydan.blog.dao.UserDao;
 import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.entity.User;
+import com.daisydan.blog.enums.ArticleType;
 import com.daisydan.blog.rest.PageInfo;
 import com.daisydan.blog.rest.RestData;
 import com.daisydan.blog.security.LoginRequired;
@@ -41,11 +42,11 @@ public class HomeController extends BaseController {
 
 
     @RequestMapping("/")
-    public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo) {
+    public ModelAndView index(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, ArticleType type) {
         ModelAndView modelAndView = new ModelAndView("/index");
         PageInfo<Article> pageInfo = new PageInfo<>(pageNo, 4);
-        pageInfo.setTotalRows(articleDao.count());
-        pageInfo.setResultList(articleDao.list(pageInfo.getStartRow(), 4));
+        pageInfo.setTotalRows(articleDao.countBySearch(type));
+        pageInfo.setResultList(articleDao.listBySearch(pageInfo.getStartRow(), 4, type));
         modelAndView.addObject("pageInfo", pageInfo);
         return modelAndView;
     }

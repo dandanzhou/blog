@@ -24,7 +24,9 @@
         <div class="some">
             <ul>
                 <c:forEach var="articleType" items="${ArticleType}">
-                    <li>● ${articleType} （${appUtils.countByType(articleType)}）</li>
+                    <li><a href="/?type=${articleType}" target="_blank">● ${articleType}
+                        （${appUtils.countByType(articleType)}）</li>
+                    </a>
                 </c:forEach>
             </ul>
         </div>
