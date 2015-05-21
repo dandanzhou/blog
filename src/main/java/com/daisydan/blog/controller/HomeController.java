@@ -1,13 +1,13 @@
 package com.daisydan.blog.controller;
 
 import com.daisydan.blog.dao.ArticleDao;
+import com.daisydan.blog.dao.CommentDao;
 import com.daisydan.blog.dao.UserDao;
 import com.daisydan.blog.entity.Article;
 import com.daisydan.blog.entity.User;
 import com.daisydan.blog.enums.ArticleType;
 import com.daisydan.blog.rest.PageInfo;
 import com.daisydan.blog.rest.RestData;
-import com.daisydan.blog.security.LoginRequired;
 import com.daisydan.blog.service.UserService;
 import com.daisydan.blog.utils.ContextUtils;
 import com.daisydan.blog.utils.WebUtils;
@@ -36,6 +36,9 @@ public class HomeController extends BaseController {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private CommentDao commentDao;
 
     @Autowired
     private ArticleDao articleDao;
@@ -130,8 +133,10 @@ public class HomeController extends BaseController {
 
 
     @RequestMapping(value = "/messages", method = RequestMethod.GET)
-    public String getMessages() {
-        return "/home/messages";
+    public ModelAndView getMessages() {
+        ModelAndView modelAndView = new ModelAndView("/home/messages");
+        modelAndView.addObject("comments", commentDao.findAll());
+        return modelAndView;
     }
 
     @RequestMapping("logout")

@@ -40,7 +40,7 @@
                             <p class="meta">
                                 <ins class="icon icon-comment"></ins>
                             <span class="comment">
-                                <a href="/article/${article.id}#comments">4 条评论</a>
+                                <a href="/article/${article.id}#comments">${article.commentCount} 条评论</a>
                             </span>
 
                                 <ins class="icon icon-view"></ins>

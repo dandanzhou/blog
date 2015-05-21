@@ -68,7 +68,7 @@
                                                    target="_blank"
                                                    rel="external nofollow">
                                                    <span
-                                                           class="author">${appUtils.getUserNameById(article.userId)}</span>
+                                                           class="author">${appUtils.getUserNameById(comment.userId)}</span>
                                                 </a>
 
                                                 <div class="comment-main">
