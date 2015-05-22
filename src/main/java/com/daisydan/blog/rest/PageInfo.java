@@ -1,15 +1,11 @@
 package com.daisydan.blog.rest;
 
-/**
- * Created by veryyoung on 2015/5/20.
- */
-
 import lombok.Data;
 
 import java.util.List;
 
 /**
- * Created by veryyoung on 2015/5/5.
+ *
  * <p>
  * 分页工具
  */

@@ -8,10 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-/**
- * Created by veryyoung on 2015/521.
- */
-
 @Repository
 public class CommentDao extends BaseDao<Comment> {
 

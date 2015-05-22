@@ -14,9 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
-/**
- * Created by veryyoung on 2015/5/19.
- */
 @Controller
 @RequestMapping("/article")
 public class ArticleController extends BaseController {

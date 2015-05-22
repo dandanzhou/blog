@@ -24,9 +24,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
-/**
- * Created by veryyoung on 2015/3/2.
- */
 @Controller
 @RequestMapping("/")
 public class HomeController extends BaseController {

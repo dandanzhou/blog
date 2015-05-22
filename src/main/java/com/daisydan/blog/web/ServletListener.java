@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebListener;
 /**
  * Web application lifecycle listener.
  * <p/>
- * Created by veryyoung on 2015/3/12.
  */
 
 @WebListener

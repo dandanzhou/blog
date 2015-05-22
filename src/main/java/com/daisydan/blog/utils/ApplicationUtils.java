@@ -14,7 +14,6 @@ import java.util.List;
 /**
  * 辅助jstl取值
  * <p>
- * Created by veryyoung on 2015/5/20.
  */
 @Service
 public class ApplicationUtils {

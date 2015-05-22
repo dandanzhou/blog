@@ -13,9 +13,6 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-/**
- * Created by veryyoung on 2015/4/21.
- */
 public class ValidatorWrapper implements Validator {
 
     protected Logger logger = LoggerFactory.getLogger(ValidatorWrapper.class);

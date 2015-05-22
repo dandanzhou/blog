@@ -13,9 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.URLEncoder;
 
-/**
- * Created by veryyoung on 2015/4/28.
- */
 public class AuthenticationFilter extends HandlerInterceptorAdapter {
 
     @Override

@@ -7,9 +7,6 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Pattern;
 
-/**
- * Created by veryyoung on 2015/4/16.
- */
 public class WebUtils {
     static Logger logger = LoggerFactory.getLogger(WebUtils.class);
 

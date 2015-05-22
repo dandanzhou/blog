@@ -6,9 +6,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by veryyoung on 2015/4/21.
- */
 public class InvalidException extends RuntimeException {
 
     private final Set<Violation> violations;

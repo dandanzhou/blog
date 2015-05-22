@@ -11,9 +11,6 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
-/**
- * Created by veryyoung on 2015/3/2.
- */
 public abstract class BaseController {
 
     @Autowired

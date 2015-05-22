@@ -1,6 +1,3 @@
-/**
- * Created by veryyoung on 2015/5/13.
- */
 ;
 define(function (require, exports, module) {
     "require:nomunge,exports:nomunge,module:nomunge";

@@ -5,9 +5,6 @@ import com.daisydan.blog.entity.User;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by veryyoung on 2015/4/23.
- */
 public class ContextUtils {
 
 

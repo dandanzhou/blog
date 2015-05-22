@@ -14,8 +14,7 @@
 
             <c:if test="${not empty error}">
                 <div class="form-group">
-                    <div class="alert alert-danger"
-                         role="alert">
+                    <div class="alert alert-danger" role="alert">
                         <button type="button" class="close" data-dismiss="alert">×</button>
                             ${error}
                     </div>

@@ -5,11 +5,6 @@ import com.daisydan.blog.entity.User;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-
-/**
- * Created by veryyoung on 2015/3/3.
- */
-
 @Repository
 public class UserDao extends BaseDao<User> {
 

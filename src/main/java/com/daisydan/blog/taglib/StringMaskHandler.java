@@ -9,9 +9,6 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 
-/**
- * Created by veryyoung on 2015/4/27.
- */
 public class StringMaskHandler extends SimpleTagSupport {
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());

@@ -18,10 +18,6 @@ import org.springframework.web.util.HtmlUtils;
 
 import java.util.Date;
 
-
-/**
- * Created by veryyoung-rmbbox on 2015/5/21.
- */
 @Controller
 @RequestMapping("/comment")
 public class CommentController extends BaseController {

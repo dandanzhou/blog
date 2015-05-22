@@ -3,7 +3,7 @@ package com.daisydan.blog.rest;
 import lombok.Data;
 
 /**
- * Created by veryyoung on 2015/4/21.
+ *
  * Define a standard JSON return format for client
  */
 @Data
