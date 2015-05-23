@@ -57,7 +57,7 @@
                         <label class="col-sm-1 control-label">Title:</label>
 
                         <div class="col-sm-11 controls">
-                            <input type="text" name="title" placeholder="Type your title" value="${article.title}">
+                            <input type="text" name="title" placeholder="Type your title" value="${article.title}" style="width: 40%;">
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -67,7 +67,7 @@
 
                         <div class="col-sm-11 controls">
                             <textarea id="post_body" name="content" class="textarea"
-                                      placeholder="Type your post">${article.content}</textarea>
+                                      placeholder="Type your content">${article.content}</textarea>
                         </div>
                         <div class="clearfix"></div>
                     </div>
