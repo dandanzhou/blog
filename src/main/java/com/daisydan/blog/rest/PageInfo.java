@@ -59,7 +59,7 @@ public class PageInfo<T> {
 
     public int getTotalPages() {
         return (int) Math.ceil((float) totalRows / pageSize);
-    }
+    }      //math.ceil(i)大于等于i的最小整数
 
 
 }
